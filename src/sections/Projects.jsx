@@ -31,6 +31,12 @@ const projects = [
     description: 'Developed centralized product data management platform with lifecycle dashboards, advanced filtering, and legacy data migration. Implemented integrations for CRM and marketing systems.',
     tags: ['JavaScript', 'Laravel', 'Microservices', 'AWS', 'Data Migration'],
     image: './public/projects/FOD.png',
+  },
+  {
+    title: 'Personal Website',
+    description: 'Developed my personal website using React and Tailwind CSS. It is a simple website that showcases my projects and skills.',
+    tags: ['React', 'Tailwind', 'Vite', 'TypeScript'],
+    image: './public/projects/personal-project.png',
   }
 ];
 
