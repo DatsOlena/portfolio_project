@@ -6,6 +6,7 @@ import { Projects } from '@/sections/Projects'
 import { Testimonials } from '@/sections/Testimonials'
 import { Contact } from '@/sections/Contact'
 import Navbar from '@/layout/Navbar'
+import Footer from '@/layout/Footer'
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -38,6 +39,7 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
+      <Footer />
     </div>
   )
 }
