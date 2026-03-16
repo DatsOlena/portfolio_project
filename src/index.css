@@ -23,6 +23,27 @@
   --color-surface: #1a2329;
 }
 
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --color-background: #f7f7f4;
+  --color-foreground: #1d251e;
+  --color-card: #ffffff;
+  --color-primary: #7b8f5d;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #e7ebdd;
+  --color-secondary-foreground: #5c7044;
+  --color-muted: #eef1e8;
+  --color-muted-foreground: #5b6556;
+  --color-border: #d7dfcf;
+  --color-highlight: #c89a45;
+  --color-surface: #ffffff;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -36,6 +57,7 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Inter", sans-serif;
+    transition: background-color 250ms ease, color 250ms ease;
   }
 
   .font-serif {
