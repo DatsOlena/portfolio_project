@@ -37,7 +37,10 @@ const skills = [
 ]
 
 
-export const Hero = () => {
+export const Hero = ({ theme = 'dark' }) => {
+  const profileImage =
+    theme === 'light' ? '/profile_photo_light.png' : '/profile_photo.png'
+
   return (
     <section
       id="home"
@@ -81,7 +84,7 @@ export const Hero = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Crafting <span className="text-primary glow-text">Clean, Modern</span> Interfaces
                 <br />
-                <span className="font-serif italic font-normal text-white">for the Web</span>
+                <span className="font-serif italic font-normal text-foreground">for the Web</span>
 
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
@@ -129,7 +132,7 @@ export const Hero = () => {
             />
             <div className="relative glass rounded-3xl p-2 glow-border">
               <img
-                src="/public/profile_photo.png"
+                src={profileImage}
                 alt="Olena Dats"
                 className="w-full aspect-[4/5] object-cover rounded-2xl"
               />
