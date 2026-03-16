@@ -95,7 +95,7 @@ export const Testimonials = () => {
             Perspectives from teammates and partners on how{" "}
             <span
               className="font-serif italic 
-            font-normal text-white"
+            font-normal text-foreground"
             >
               I work, build, and contribute to projects.
             </span>
@@ -136,6 +136,7 @@ export const Testimonials = () => {
               <div className="flex gap-2">
                 {testimonials.map((_, idx) => (
                   <button
+                    key={idx}
                     onClick={() => setActiveIdx(idx)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIdx
                       ? "w-8 bg-primary"

@@ -74,7 +74,7 @@ export const Experience = () => {
             text-secondary-foreground"
           >
             Experience shaped by{" "}
-            <span className="font-serif italic font-normal text-white">
+            <span className="font-serif italic font-normal text-foreground">
               {" "}
               real challenges.
             </span>

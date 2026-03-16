@@ -52,7 +52,7 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building meaningful products,               <span className="font-serif italic font-normal text-white">not just interfaces.</span>
+              Building meaningful products,               <span className="font-serif italic font-normal text-foreground">not just interfaces.</span>
             </h2>
 
             <div className="space-y-5 text-muted-foreground leading-relaxed animate-fade-in animation-delay-200">
