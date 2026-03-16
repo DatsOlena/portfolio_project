@@ -88,7 +88,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button>
+            <Button onClick={() => { setIsMenuOpen(false) }}>
               Let&apos;s Talk
             </Button>
           </div>
