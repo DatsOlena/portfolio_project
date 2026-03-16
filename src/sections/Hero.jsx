@@ -40,6 +40,10 @@ const skills = [
 export const Hero = ({ theme = 'dark' }) => {
   const profileImage =
     theme === 'light' ? '/profile_photo_light.png' : '/profile_photo.png'
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact')
+    contactSection?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <section
@@ -94,7 +98,7 @@ export const Hero = ({ theme = 'dark' }) => {
             </div>
 
             <div className="flex items-center gap-4 flex-wrap animate-fade-in animation-delay-300">
-              <Button size="lg">
+              <Button size="lg" type="button" onClick={scrollToContact}>
                 Contact me <ArrowRight className="w-5 h-5" />
               </Button>
               <AnimatedBorderButton>

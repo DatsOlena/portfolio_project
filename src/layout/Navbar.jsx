@@ -32,6 +32,12 @@ export default function Navbar({ theme, onToggleTheme }) {
     setIsMenuOpen(prev => !prev)
   }
 
+  function scrollToContact() {
+    const contactSection = document.getElementById('contact')
+    contactSection?.scrollIntoView({ behavior: 'smooth' })
+    setIsMenuOpen(false)
+  }
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} `}>
       <nav className="container mx-auto flex items-center justify-between px-6">
@@ -66,7 +72,11 @@ export default function Navbar({ theme, onToggleTheme }) {
           >
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-          <Button className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
+          <Button
+            type="button"
+            onClick={scrollToContact}
+            className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+          >
             Let&apos;s Talk
           </Button>
         </div>
@@ -103,7 +113,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                 {link.label}
               </a>
             ))}
-            <Button onClick={() => { setIsMenuOpen(false) }}>
+            <Button type="button" onClick={scrollToContact}>
               Let&apos;s Talk
             </Button>
           </div>
