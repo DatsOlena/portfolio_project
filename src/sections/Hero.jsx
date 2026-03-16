@@ -40,9 +40,18 @@ const skills = [
 export const Hero = ({ theme = 'dark' }) => {
   const profileImage =
     theme === 'light' ? '/profile_photo_light.png' : '/profile_photo.png'
+  const cvUrl = '/CV/CV_Olena_Dats_Frontend.pdf'
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact')
     contactSection?.scrollIntoView({ behavior: 'smooth' })
+  }
+  const downloadCV = () => {
+    const anchor = document.createElement('a')
+    anchor.href = cvUrl
+    anchor.download = 'CV_Olena_Dats_Frontend.pdf'
+    document.body.appendChild(anchor)
+    anchor.click()
+    document.body.removeChild(anchor)
   }
 
   return (
@@ -101,7 +110,7 @@ export const Hero = ({ theme = 'dark' }) => {
               <Button size="lg" type="button" onClick={scrollToContact}>
                 Contact me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton onClick={downloadCV} aria-label="Download CV PDF">
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
