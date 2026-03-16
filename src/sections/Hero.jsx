@@ -79,7 +79,7 @@ export const Hero = () => {
 
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafring <span className="text-primary glow-text">Clean, Modern</span> Interfaces
+                Crafting <span className="text-primary glow-text">Clean, Modern</span> Interfaces
                 <br />
                 <span className="font-serif italic font-normal text-white">for the Web</span>
 
