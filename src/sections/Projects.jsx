@@ -7,32 +7,38 @@ const projects = [
     description: 'Built modern property listing and agent interaction platform using Next.js App Router and TypeScript. Implemented reusable UI components, API-driven data flows, internationalization, and Stripe-based payment intents for promotional features.',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Stripe', 'OpenAPI'],
     image: '/projects/livappy.png',
+    link: 'https://www.livappy.com',
   },
   {
     title: 'Partner Portal',
     description: 'Developed enterprise partner management dashboard with onboarding workflows, analytics, and role-based authentication. Integrated CMS-driven dynamic content and RESTful APIs for partner data and asset management.',
     tags: ['React', 'TypeScript', 'Tailwind', 'REST API', 'GraphQL', 'CMS Integration'],
     image: '/projects/partner-portal.png',
+    link: 'https://www.screeningeagle.com/partner/signin',
   },
   {
     title: 'Corporate Website',
     description: 'Implemented responsive multi-language corporate website with Symfony backend integration. Built dynamic product, news, and event content delivery supported by scalable AWS infrastructure.',
     tags: ['JavaScript', 'Twig', 'SCSS', 'PHP', 'Symfony', 'AWS'],
     image: '/projects/website.png',
+    link: 'https://www.screeningeagle.com',
   },
   {
     title: 'Tracking Time System',
     description: 'Created internal operations dashboard for employee timesheet tracking and utilization analytics. Delivered real-time reporting features, role management, and exportable analytics visualizations.',
     tags: ['JavaScript', 'Laravel', 'Chart.js', 'Blade', 'REST API'],
     image: '/projects/ET.png',
+    link: 'https://trace-development.screeningeagle.cloud/login',
   },
   {
     title: 'Product Master Catalog',
     description: 'Developed centralized product data management platform with lifecycle dashboards, advanced filtering, and legacy data migration. Implemented integrations for CRM and marketing systems.',
     tags: ['JavaScript', 'Laravel', 'Microservices', 'AWS', 'Data Migration'],
     image: '/projects/FOD.png',
+    link: 'https://fod.screeningeagle.cloud/login',
   },
-  {title: 'Water Monitoring System',
+  {
+    title: 'Water Monitoring System',
     description: "Full-stack water analytics app with interactive dashboards, live/news data feeds, and SQLite CRUD, built with React + TypeScript and Node.js + Express.",
     tags: [
       "React",
@@ -50,12 +56,27 @@ const projects = [
       "ESLint"
     ],
     image: '/projects/water-monitoring.png',
+    github: 'https://github.com/DatsOlena/NTSuisse-demo',
   },
   {
     title: 'Personal Website',
     description: 'Developed my personal website using React and Tailwind CSS. It is a simple website that showcases my projects and skills.',
     tags: ['React', 'Tailwind', 'Vite', 'TypeScript'],
     image: '/projects/personal-project.png',
+    link: 'https://portfolio-project-navy-five.vercel.app/',
+    github: 'https://github.com/DatsOlena/portfolio_project',
+  },
+  {
+    title: 'AI Customer Support Assistant',
+    description: 'Soon to be: a production-ready AI support workspace for faster responses, smart routing, and conversation insights.',
+    tags: ['React', 'TypeScript', 'Node.js', 'OpenAI API', 'PostgreSQL'],
+    image: '/projects/project-placeholder.svg',
+  },
+  {
+    title: 'E-commerce Analytics Hub',
+    description: 'Soon to be: a centralized analytics dashboard for sales, behavior, and campaign performance with real-time reporting.',
+    tags: ['Next.js', 'Tailwind CSS', 'Python', 'FastAPI', 'Chart.js'],
+    image: '/projects/project-placeholder.svg',
   }
 ];
 
@@ -105,20 +126,32 @@ export const Projects = () => {
                  to-transparent opacity-60"
                 />
                 {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={project.github}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                </div>
+                {(project.link || project.github) && (
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                        aria-label={`Open ${project.title} project link`}
+                      >
+                        <ArrowUpRight className="w-5 h-5" />
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                        aria-label={`Open ${project.title} GitHub repository`}
+                      >
+                        <Github className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
 
               {/* Content */}

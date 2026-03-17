@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#1A2329"/>
+  <rect x="40" y="40" width="1120" height="595" rx="24" fill="#252E37" stroke="#3A4652"/>
+  <circle cx="120" cy="120" r="20" fill="#8B9469"/>
+  <circle cx="180" cy="120" r="20" fill="#5B6556"/>
+  <circle cx="240" cy="120" r="20" fill="#D7DFCF"/>
+  <rect x="80" y="190" width="420" height="34" rx="8" fill="#D7DFCF" fill-opacity="0.35"/>
+  <rect x="80" y="246" width="640" height="22" rx="6" fill="#D7DFCF" fill-opacity="0.2"/>
+  <rect x="80" y="282" width="580" height="22" rx="6" fill="#D7DFCF" fill-opacity="0.2"/>
+  <rect x="80" y="318" width="520" height="22" rx="6" fill="#D7DFCF" fill-opacity="0.2"/>
+  <rect x="80" y="386" width="180" height="48" rx="24" fill="#8B9469" fill-opacity="0.3" stroke="#8B9469"/>
+  <rect x="280" y="386" width="180" height="48" rx="24" fill="#8B9469" fill-opacity="0.15" stroke="#8B9469" stroke-opacity="0.45"/>
+  <rect x="780" y="190" width="340" height="360" rx="16" fill="#1A2329" stroke="#3A4652"/>
+  <rect x="820" y="230" width="260" height="18" rx="6" fill="#D7DFCF" fill-opacity="0.3"/>
+  <rect x="820" y="264" width="220" height="14" rx="6" fill="#D7DFCF" fill-opacity="0.2"/>
+  <rect x="820" y="334" width="260" height="140" rx="12" fill="#8B9469" fill-opacity="0.18"/>
+  <text x="80" y="500" fill="#D7DFCF" fill-opacity="0.65" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">
+    Project preview coming soon
+  </text>
+</svg>
