@@ -72,7 +72,7 @@ export const Hero = ({ theme = 'dark' }) => {
         |{[...Array(30)].map((_, index) => (
           <div className="absolute inset-0 w-1.5 h-1.5 opacity-60 rounded-full" key={index}
             style={{
-              backgroundColor: "#20B2A6",
+              backgroundColor: "#8b9469",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
