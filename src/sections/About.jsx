@@ -45,17 +45,17 @@ export const About = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-14 items-start">
           <div className="space-y-8">
-            <div className="animate-fade-in">
+            <div className="animate-fade-in reveal-on-scroll">
               <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
                 About Me
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 reveal-on-scroll text-secondary-foreground">
               Building meaningful products,               <span className="font-serif italic font-normal text-foreground">not just interfaces.</span>
             </h2>
 
-            <div className="space-y-5 text-muted-foreground leading-relaxed animate-fade-in animation-delay-200">
+            <div className="space-y-5 text-muted-foreground leading-relaxed animate-fade-in animation-delay-200 reveal-on-scroll">
               <p>
                 I am a frontend engineer who cares deeply about how technology
                 feels to people. For me, great software is not only about clean
@@ -83,7 +83,7 @@ export const About = () => {
               </p>
             </div>
 
-            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300 reveal-on-scroll card-hover-lift">
               <p className="text-lg font-medium italic text-foreground">
                 My goal is simple: to create digital products that feel
                 effortless to use, solid to maintain, and inspiring to build.
@@ -95,7 +95,7 @@ export const About = () => {
             {focusAreas.map((item, idx) => (
               <article
                 key={item.title}
-                className="glass rounded-2xl p-6 animate-fade-in"
+                className="glass rounded-2xl p-6 animate-fade-in reveal-on-scroll card-hover-lift"
                 style={{ animationDelay: `${(idx + 2) * 100}ms` }}
               >
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">

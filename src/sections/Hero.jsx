@@ -57,7 +57,7 @@ export const Hero = ({ theme = 'dark' }) => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidde"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
       <div className="absolute inset-0">
         <img
@@ -69,7 +69,7 @@ export const Hero = ({ theme = 'dark' }) => {
       </div>
       {/*Green dots*/}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        |{[...Array(30)].map((_, index) => (
+        {[...Array(30)].map((_, index) => (
           <div className="absolute inset-0 w-1.5 h-1.5 opacity-60 rounded-full" key={index}
             style={{
               backgroundColor: "#8b9469",
@@ -86,27 +86,27 @@ export const Hero = ({ theme = 'dark' }) => {
       <div className="container mx-auto px-6 pt-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="animate-fade-in">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+            <div className="animate-fade-in reveal-on-scroll">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary animated-sheen">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 Frontend developer & React Specialist
               </span>
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100 reveal-on-scroll">
                 Crafting <span className="text-primary glow-text">Clean, Modern</span> Interfaces
                 <br />
                 <span className="font-serif italic font-normal text-foreground">for the Web</span>
 
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 reveal-on-scroll">
                 Hi, I'm Olena Dats - a frontend developer with a passion for creating clean, modern interfaces.
                 I specialise in React, Next.js, Tailwind CSS, and TypeScript.
               </p>
             </div>
 
-            <div className="flex items-center gap-4 flex-wrap animate-fade-in animation-delay-300">
+            <div className="flex items-center gap-4 flex-wrap animate-fade-in animation-delay-300 reveal-on-scroll">
               <Button size="lg" type="button" onClick={scrollToContact}>
                 Contact me <ArrowRight className="w-5 h-5" />
               </Button>
@@ -116,7 +116,7 @@ export const Hero = ({ theme = 'dark' }) => {
               </AnimatedBorderButton>
             </div>
 
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400 reveal-on-scroll">
               <span className="text-muted-foreground text-sm"> Follow me on</span>
               {[
                 {
@@ -136,9 +136,9 @@ export const Hero = ({ theme = 'dark' }) => {
             </div>
           </div>
 
-          <div className="relative max-w-md mx-auto">
+          <div className="relative max-w-md mx-auto animate-fade-in animation-delay-400 reveal-on-scroll">
             <div
-              className="absolute inset-0 
+              className="absolute inset-0 animate-drift-x
               rounded-3xl bg-gradient-to-br 
               from-primary/30 via-transparent 
               to-primary/10 blur-2xl animate-pulse"
@@ -170,7 +170,7 @@ export const Hero = ({ theme = 'dark' }) => {
           </div>
         </div>
 
-        <div className="mt-20 animate-fade-in animation-delay-600">
+        <div className="mt-20 animate-fade-in animation-delay-600 reveal-on-scroll">
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>

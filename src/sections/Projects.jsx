@@ -91,22 +91,22 @@ export const Projects = () => {
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* Bg glows */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-soft-pulse" />
+      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl animate-drift-x" />
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
+          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in reveal-on-scroll">
             Project Highlights
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 reveal-on-scroll text-secondary-foreground">
             Engineering
             <span className="font-serif italic font-normal text-foreground">
               {" "}
               in Practice.
             </span>
           </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
+          <p className="text-muted-foreground animate-fade-in animation-delay-200 reveal-on-scroll">
             A selection of my recent work, from enterprise dashboards to user-focused platforms, these projects reflect my approach to building structured, maintainable, and meaningful interfaces.
           </p>
         </div>
@@ -116,7 +116,7 @@ export const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1 max-w-lg mx-auto"
+              className="group glass rounded-2xl overflow-hidden animate-fade-in reveal-on-scroll md:row-span-1 max-w-lg mx-auto card-hover-lift"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
               {/* Image */}
@@ -192,7 +192,7 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
+        <div className="text-center mt-12 animate-fade-in animation-delay-500 reveal-on-scroll">
           <AnimatedBorderButton type="button" onClick={openAllProjects}>
             View All Projects
             <ArrowUpRight className="w-5 h-5" />

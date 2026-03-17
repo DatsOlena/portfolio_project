@@ -56,7 +56,7 @@ export const Experience = () => {
     <section id="experience" className="py-32 relative overflow-hidden">
       <div
         className="absolute top-1/2 left-1/4 w-96
-       h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
+       h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 animate-soft-pulse"
       />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -64,14 +64,14 @@ export const Experience = () => {
         <div className="max-w-3xl mb-16">
           <span
             className="text-secondary-foreground text-sm
-           font-medium tracking-wider uppercase animate-fade-in"
+           font-medium tracking-wider uppercase animate-fade-in reveal-on-scroll"
           >
             Career Journey
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
-            text-secondary-foreground"
+            reveal-on-scroll text-secondary-foreground"
           >
             Experience shaped by{" "}
             <span className="font-serif italic font-normal text-foreground">
@@ -82,7 +82,7 @@ export const Experience = () => {
 
           <p
             className="text-muted-foreground
-           animate-fade-in animation-delay-200"
+           animate-fade-in animation-delay-200 reveal-on-scroll"
           >
             My career reflects steady growth through collaboration, system thinking, and building frontend solutions that make complex data and workflows easier to use.
           </p>
@@ -97,7 +97,7 @@ export const Experience = () => {
             {experiences.map((exp, idx) => (
               <div
                 key={idx}
-                className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
+                className="relative grid md:grid-cols-2 gap-8 animate-fade-in reveal-on-scroll"
                 style={{ animationDelay: `${(idx + 1) * 150}ms` }}
               >
                 {/* Timeline Dot */}
@@ -115,7 +115,7 @@ export const Experience = () => {
                     }`}
                 >
                   <div
-                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
+                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500 card-hover-lift`}
                   >
                     <span className="text-sm text-primary font-medium">
                       {exp.period}

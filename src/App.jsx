@@ -24,6 +24,35 @@ function App() {
     window.localStorage.setItem('theme', theme)
   }, [theme])
 
+  useEffect(() => {
+    const revealElements = Array.from(
+      document.querySelectorAll('.reveal-on-scroll')
+    )
+
+    if (!revealElements.length) return
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return
+
+          const delay = entry.target.getAttribute('data-reveal-delay')
+          if (delay) {
+            entry.target.style.transitionDelay = `${delay}ms`
+          }
+
+          entry.target.classList.add('is-visible')
+          revealObserver.unobserve(entry.target)
+        })
+      },
+      { threshold: 0, rootMargin: '0px 0px 18% 0px' }
+    )
+
+    revealElements.forEach((element) => revealObserver.observe(element))
+
+    return () => revealObserver.disconnect()
+  }, [])
+
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'))
   }
