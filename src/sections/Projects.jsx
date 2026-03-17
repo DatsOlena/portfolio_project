@@ -82,6 +82,12 @@ const projects = [
 
 
 export const Projects = () => {
+  const allProjectsUrl = 'https://github.com/DatsOlena?tab=repositories'
+
+  const openAllProjects = () => {
+    window.open(allProjectsUrl, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* Bg glows */}
@@ -187,7 +193,7 @@ export const Projects = () => {
 
         {/* View All CTA */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
+          <AnimatedBorderButton type="button" onClick={openAllProjects}>
             View All Projects
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
