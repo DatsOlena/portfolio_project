@@ -11,7 +11,7 @@ const projects = [
   {
     title: 'Partner Portal',
     description: 'Developed enterprise partner management dashboard with onboarding workflows, analytics, and role-based authentication. Integrated CMS-driven dynamic content and RESTful APIs for partner data and asset management.',
-    tags: ['React', 'TypeScript', 'Tailwind', 'REST API', 'CMS Integration'],
+    tags: ['React', 'TypeScript', 'Tailwind', 'REST API', 'GraphQL', 'CMS Integration'],
     image: '/projects/partner-portal.png',
   },
   {
@@ -31,6 +31,25 @@ const projects = [
     description: 'Developed centralized product data management platform with lifecycle dashboards, advanced filtering, and legacy data migration. Implemented integrations for CRM and marketing systems.',
     tags: ['JavaScript', 'Laravel', 'Microservices', 'AWS', 'Data Migration'],
     image: '/projects/FOD.png',
+  },
+  {title: 'Water Monitoring System',
+    description: "Full-stack water analytics app with interactive dashboards, live/news data feeds, and SQLite CRUD, built with React + TypeScript and Node.js + Express.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "React Leaflet",
+      "Node.js",
+      "Express",
+      "SQLite (sql.js)",
+      "REST API",
+      "Jest",
+      "React Testing Library",
+      "ESLint"
+    ],
+    image: '/projects/water-monitoring.png',
   },
   {
     title: 'Personal Website',
