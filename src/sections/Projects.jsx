@@ -6,37 +6,37 @@ const projects = [
     title: 'Livappy Real Estate Platform',
     description: 'Built modern property listing and agent interaction platform using Next.js App Router and TypeScript. Implemented reusable UI components, API-driven data flows, internationalization, and Stripe-based payment intents for promotional features.',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Stripe', 'OpenAPI'],
-    image: './public/projects/livappy.png',
+    image: '/projects/livappy.png',
   },
   {
     title: 'Partner Portal',
     description: 'Developed enterprise partner management dashboard with onboarding workflows, analytics, and role-based authentication. Integrated CMS-driven dynamic content and RESTful APIs for partner data and asset management.',
     tags: ['React', 'TypeScript', 'Tailwind', 'REST API', 'CMS Integration'],
-    image: './public/projects/partner-portal.png',
+    image: '/projects/partner-portal.png',
   },
   {
     title: 'Corporate Website',
     description: 'Implemented responsive multi-language corporate website with Symfony backend integration. Built dynamic product, news, and event content delivery supported by scalable AWS infrastructure.',
     tags: ['JavaScript', 'Twig', 'SCSS', 'PHP', 'Symfony', 'AWS'],
-    image: './public/projects/website.png',
+    image: '/projects/website.png',
   },
   {
     title: 'Tracking Time System',
     description: 'Created internal operations dashboard for employee timesheet tracking and utilization analytics. Delivered real-time reporting features, role management, and exportable analytics visualizations.',
     tags: ['JavaScript', 'Laravel', 'Chart.js', 'Blade', 'REST API'],
-    image: './public/projects/ET.png',
+    image: '/projects/ET.png',
   },
   {
     title: 'Product Master Catalog',
     description: 'Developed centralized product data management platform with lifecycle dashboards, advanced filtering, and legacy data migration. Implemented integrations for CRM and marketing systems.',
     tags: ['JavaScript', 'Laravel', 'Microservices', 'AWS', 'Data Migration'],
-    image: './public/projects/FOD.png',
+    image: '/projects/FOD.png',
   },
   {
     title: 'Personal Website',
     description: 'Developed my personal website using React and Tailwind CSS. It is a simple website that showcases my projects and skills.',
     tags: ['React', 'Tailwind', 'Vite', 'TypeScript'],
-    image: './public/projects/personal-project.png',
+    image: '/projects/personal-project.png',
   }
 ];
 
