@@ -166,12 +166,11 @@ export const Projects = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
+                  {(project.link || project.github) && (
+                  <a href={project.link || project.github} target="_blank" rel="noreferrer" className="cursor-pointer">
+                      <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  </a>
+                  )}
                 </div>
                 <p className="text-muted-foreground text-sm">
                   {project.description}
