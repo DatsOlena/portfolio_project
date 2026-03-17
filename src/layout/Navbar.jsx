@@ -38,6 +38,11 @@ export default function Navbar({ theme, onToggleTheme }) {
     setIsMenuOpen(false)
   }
 
+  function handleThemeToggle() {
+    onToggleTheme?.()
+    setIsMenuOpen(false)
+  }
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} `}>
       <nav className="container mx-auto flex items-center justify-between px-6">
@@ -66,7 +71,7 @@ export default function Navbar({ theme, onToggleTheme }) {
         <div className="hidden items-center gap-2 md:flex">
           <button
             type="button"
-            onClick={onToggleTheme}
+            onClick={handleThemeToggle}
             className="glass inline-flex h-10 w-10 items-center justify-center rounded-full text-foreground transition-colors hover:text-primary"
             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
           >
@@ -97,7 +102,7 @@ export default function Navbar({ theme, onToggleTheme }) {
           <div className="container mx-auto p-6 flex flex-col gap-4">
             <button
               type="button"
-              onClick={onToggleTheme}
+              onClick={handleThemeToggle}
               className="glass inline-flex h-11 items-center justify-center gap-2 rounded-xl px-4 text-sm font-medium text-foreground transition-colors hover:text-primary"
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
