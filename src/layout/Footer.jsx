@@ -1,5 +1,4 @@
-
-import { socialLinks } from '@/constants/social'
+import { socialLinks } from '@/data/social';
 
 const footerLinks = [
   { href: "#about", label: "About" },

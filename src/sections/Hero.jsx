@@ -2,7 +2,7 @@ import { Button } from '@/components/Button'
 import { AnimatedBorderButton } from '@/components/AnimatedBorderButton'
 
 import { ArrowRight, Download } from 'lucide-react'
-import { socialLinks } from '@/constants/social'
+import { socialLinks } from '@/data/social'
 
 const skills = [
   "Redux",
