@@ -1,7 +1,8 @@
 import { Button } from '@/components/Button'
 import { AnimatedBorderButton } from '@/components/AnimatedBorderButton'
 
-import { ArrowRight, Download, Github, Linkedin } from 'lucide-react'
+import { ArrowRight, Download } from 'lucide-react'
+import { socialLinks } from '@/constants/social'
 
 const skills = [
   "Redux",
@@ -118,18 +119,14 @@ export const Hero = ({ theme = 'dark' }) => {
 
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400 reveal-on-scroll">
               <span className="text-muted-foreground text-sm"> Follow me on</span>
-              {[
-                {
-                  icon: <Github className="w-5 h-5" />,
-                  href: 'https://github.com/DatsOlena',
-                },
-                {
-                  icon: <Linkedin className="w-5 h-5" />,
-                  href: 'https://www.linkedin.com/in/olenadats/',
-                },
-              ].map(({ icon, href }, index) => (
-                <a href={href} key={index} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
-                  <span className="h-5 w-5">{icon}</span>
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  <Icon className="w-5 h-5" />
                 </a>
               ))}
 
