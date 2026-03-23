@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const testimonials = [
   {
@@ -76,31 +77,12 @@ export const Testimonials = () => {
         className="container mx-auto 
       px-6 relative z-10"
       >
-        <div
-          className="text-center max-w-3xl 
-        mx-auto mb-16"
-        >
-          <span
-            className="text-secondary-foreground 
-          text-sm font-medium tracking-wider 
-          uppercase animate-fade-in reveal-on-scroll"
-          >
-            What People Say
-          </span>
-          <h2
-            className="text-4xl md:text-5xl 
-          font-bold mt-4 mb-6 animate-fade-in 
-          animation-delay-100 reveal-on-scroll text-secondary-foreground"
-          >
-            Perspectives from teammates and partners on how{" "}
-            <span
-              className="font-serif italic 
-            font-normal text-foreground"
-            >
-              I work, build, and contribute to projects.
-            </span>
-          </h2>
-        </div>
+        <SectionHeader
+          label="What People Say"
+          title="Perspectives from teammates and partners on how "
+          titleItalic="I work, build, and contribute to projects."
+          centered
+        />
 
         {/* Testimonial Carousel */}
         <div className="max-w-4xl mx-auto">

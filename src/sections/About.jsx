@@ -1,4 +1,5 @@
 import { Blocks, BrainCircuit, Code2, Rocket, Users, Workflow } from 'lucide-react'
+import { SectionHeader } from '@/components/SectionHeader'
 
 const focusAreas = [
   {
@@ -45,15 +46,11 @@ export const About = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-14 items-start">
           <div className="space-y-8">
-            <div className="animate-fade-in reveal-on-scroll">
-              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                About Me
-              </span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 reveal-on-scroll text-secondary-foreground">
-              Building meaningful products,               <span className="font-serif italic font-normal text-foreground">not just interfaces.</span>
-            </h2>
+            <SectionHeader
+              label="About Me"
+              title="Building meaningful products, "
+              titleItalic="not just interfaces."
+            />
 
             <div className="space-y-5 text-muted-foreground leading-relaxed animate-fade-in animation-delay-200 reveal-on-scroll">
               <p>

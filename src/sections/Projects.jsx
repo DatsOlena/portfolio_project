@@ -1,5 +1,6 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const projects = [
   {
@@ -94,22 +95,13 @@ export const Projects = () => {
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-soft-pulse" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl animate-drift-x" />
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mx-auto max-w-3xl mb-16">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in reveal-on-scroll">
-            Project Highlights
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 reveal-on-scroll text-secondary-foreground">
-            Engineering
-            <span className="font-serif italic font-normal text-foreground">
-              {" "}
-              in Practice.
-            </span>
-          </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200 reveal-on-scroll">
-            A selection of my recent work, from enterprise dashboards to user-focused platforms, these projects reflect my approach to building structured, maintainable, and meaningful interfaces.
-          </p>
-        </div>
+        <SectionHeader
+          label="Project Highlights"
+          title="Engineering "
+          titleItalic="in Practice."
+          subtitle="A selection of my recent work, from enterprise dashboards to user-focused platforms, these projects reflect my approach to building structured, maintainable, and meaningful interfaces."
+          centered
+        />
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -167,9 +159,9 @@ export const Projects = () => {
                     {project.title}
                   </h3>
                   {(project.link || project.github) && (
-                  <a href={project.link || project.github} target="_blank" rel="noreferrer" className="cursor-pointer">
+                    <a href={project.link || project.github} target="_blank" rel="noreferrer" className="cursor-pointer">
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-                  </a>
+                    </a>
                   )}
                 </div>
                 <p className="text-muted-foreground text-sm">
