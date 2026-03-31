@@ -3,12 +3,12 @@ export const SectionHeader = ({
   title,
   titleItalic,
   subtitle,
-  centered = false,
+  position = 'center',
 }) => (
   <div
-    className={`max-w-3xl mb-16 ${centered ? 'text-center mx-auto' : ''}`}
+    className={`max-w-3xl mb-16 ${position === 'center' ? 'text-center mx-auto' : position === 'left' ? 'text-left mr-auto' : 'text-right ml-auto'}`}
   >
-    <span className="text-secondary-forexground text-sm font-medium tracking-wider uppercase animate-fade-in reveal-on-scroll">
+    <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in reveal-on-scroll">
       {label}
     </span>
     <h2 className="text-4xl md:text-5xl font-bold leading-tight mt-4 mb-6 animate-fade-in animation-delay-100 reveal-on-scroll text-secondary-foreground">
