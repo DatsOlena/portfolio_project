@@ -66,6 +66,7 @@ export const Experience = () => {
           title="Experience shaped by "
           titleItalic="real challenges."
           subtitle="My career reflects steady growth through collaboration, system thinking, and building frontend solutions that make complex data and workflows easier to use."
+          position="left"
         />
 
         {/* Timeline */}
