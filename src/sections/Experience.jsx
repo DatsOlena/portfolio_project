@@ -3,7 +3,7 @@ import { SectionHeader } from '@/components/SectionHeader'
 const experiences = [
   {
     period: "04/2022 - present",
-    role: "Front-end Developer",
+    role: "Front-end Engineer",
     company: "Cloud Automate",
     description:
       "Developed landing pages and frontend features for client projects, ensuring responsive design, pixel-perfect implementation, and supporting testing processes to improve delivery quality.",
@@ -28,6 +28,22 @@ const experiences = [
       "REST API",
       "Chart.js",
       "CMS"
+    ],
+    current: false,
+  },
+  {
+    period: "10/2021 – 10/2022",
+    role: "Software Engineer",
+    company: "Financial Services Platform (NDA) · Lviv, Ukraine",
+    description:
+      "Built UI components for an internal financial dashboard used by non-technical users. Worked with complex data structures and improved data visualization clarity. Integrated REST APIs and ensured reliable data flow across the application. Refactored legacy UI to improve maintainability and consistency. Collaborated with developers and business stakeholders to deliver data-driven features.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "REST API",
+      "UI Components",
+      "Data Visualization",
     ],
     current: false,
   },

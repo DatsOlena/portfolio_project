@@ -102,7 +102,7 @@ export const Hero = ({ theme = 'dark' }) => {
 
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 reveal-on-scroll">
-                Hi, I'm Olena Dats - a frontend developer with a passion for creating clean, modern interfaces.
+                Hi, I'm Olena Dats - a frontend software engineer with a passion for creating clean, modern interfaces.
                 I specialise in React, Next.js, Tailwind CSS, and TypeScript.
               </p>
             </div>
