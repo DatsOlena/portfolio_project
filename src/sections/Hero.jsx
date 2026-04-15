@@ -41,7 +41,7 @@ const skills = [
 export const Hero = ({ theme = 'dark' }) => {
   const profileImage =
     theme === 'light' ? '/profile_photo_light.png' : '/profile_photo.png'
-  const cvUrl = '/CV/CV_Olena_Dats_Frontend.pdf'
+  const cvUrl = '/CV/CV_FE_Olena_Dats.pdf'
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact')
     contactSection?.scrollIntoView({ behavior: 'smooth' })
@@ -49,7 +49,7 @@ export const Hero = ({ theme = 'dark' }) => {
   const downloadCV = () => {
     const anchor = document.createElement('a')
     anchor.href = cvUrl
-    anchor.download = 'CV_Olena_Dats_Frontend.pdf'
+    anchor.download = 'CV_FE_Olena_Dats.pdf'
     document.body.appendChild(anchor)
     anchor.click()
     document.body.removeChild(anchor)
